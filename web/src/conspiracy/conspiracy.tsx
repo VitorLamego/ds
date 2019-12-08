@@ -7,6 +7,6 @@ import {Window, Tab, Tabs, Btn, Sidebar} from '../ui';
  */
 export class Conspiracy {
     view () {
-        return <Window>Conspiracao</Window>
+        return <Window>Conspiracao 2</Window>
     }
-}
+} 
