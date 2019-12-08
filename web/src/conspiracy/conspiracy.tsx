@@ -15,7 +15,7 @@ export class Conspiracy {
                 <Tab title={<button class="nes-btn">Visão Geral</button>}>
                     <VisãoGeral></VisãoGeral>
                 </Tab>
-                <Tab title={<button class="nes-btn">Subornar</button>}>
+                <Tab title={<button class="nes-btn">Ações</button>}>
                     <Ações text="Selecione a quantidade de seguidores a se subornar" btn_text="Enviar a maleta" btn_expnd="Saber Mais"></Ações>
                 </Tab>
             </Tabs>
