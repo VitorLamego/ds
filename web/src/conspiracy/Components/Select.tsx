@@ -1,6 +1,10 @@
-import {Modal} from './Modal';
+import {ModalApagar} from './Modal';
+import {ModalCooptar} from './Modal';
+import {ModalEvoluir} from './Modal';
+import {ModalPresentear} from './Modal';
+import {ModalSubornar} from './Modal';
 
-export class Select {
+export class SelectApagar {
     option: number;
 
     constructor(vnode) {
@@ -9,24 +13,201 @@ export class Select {
 
     view(vnode) {
 
-        let Valor = vnode.attrs.text;
-        let btn_text = vnode.attrs.btn_text || "Botão sem título";
-        let multp = vnode.attrs.multiplicador || 1000;
         let link = vnode.attrs.link;
         let nome = vnode.attrs.nome;
 
         return <div class="nes-container is-rounded">
             <ul>
-                <li>{Valor}: {this.select()} </li>
+                <li>Selecione a quantidade de seguidores a se apagar: {this.select()} </li>
                 <li>Custa U$ {this.value()}</li>
-                <li><Modal n={this.nFollowers()} btn_text={btn_text} link={link} nome={nome}/></li>
+                <li><ModalApagar n={this.nFollowers()} btn_text="Apagar seguidores" link={link} nome={nome}/></li>
             </ul>
         </div>
     }
 
     value() {
 
-        return this.option * 10000;
+        return this.option * 25;
+    }
+
+    select() {
+        
+        return <select oninput={(ev) => this.setOption(ev) }>
+            <option hidden>Escolha aqui</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+        </select>
+    }
+
+    setOption(ev) {
+            this.option = parseInt(ev.target.value);
+    }
+
+    nFollowers() {
+            return this.option;
+} 
+}
+export class SelectCooptar {
+    option: number;
+
+    constructor(vnode) {
+        this.option = vnode.attrs.option;
+    }
+
+    view(vnode) {
+
+        let link = vnode.attrs.link;
+        let nome = vnode.attrs.nome;
+
+        return <div class="nes-container is-rounded">
+            <ul>
+                <li>Selecione a quantidade de seguidores a se cooptar: {this.select()} </li>
+                <li>Custa U$ {this.value()}</li>
+                <li><ModalCooptar n={this.nFollowers()} btn_text="Cooptar seguidores" link={link} nome={nome}/></li>
+            </ul>
+        </div>
+    }
+
+    value() {
+
+        return this.option * 25;
+    }
+
+    select() {
+        
+        return <select oninput={(ev) => this.setOption(ev) }>
+            <option hidden>Escolha aqui</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+        </select>
+    }
+
+    setOption(ev) {
+            this.option = parseInt(ev.target.value);
+    }
+
+    nFollowers() {
+            return this.option;
+} 
+}
+export class SelectEvoluir {
+    option: number;
+
+    constructor(vnode) {
+        this.option = vnode.attrs.option;
+    }
+
+    view(vnode) {
+
+        let link = vnode.attrs.link;
+        let nome = vnode.attrs.nome;
+
+        return <div class="nes-container is-rounded">
+            <ul>
+                <li>Selecione a quantidade de habilidades a se evoluir: {this.select()} </li>
+                <li>Custa U$ {this.value()}</li>
+                <li><ModalEvoluir n={this.nFollowers()} btn_text="Evoluir habilidades" link={link} nome={nome}/></li>
+            </ul>
+        </div>
+    }
+
+    value() {
+
+        return this.option * 25;
+    }
+
+    select() {
+        
+        return <select oninput={(ev) => this.setOption(ev) }>
+            <option hidden>Escolha aqui</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+        </select>
+    }
+
+    setOption(ev) {
+            this.option = parseInt(ev.target.value);
+    }
+
+    nFollowers() {
+            return this.option;
+} 
+}
+export class SelectPresentear {
+    option: number;
+
+    constructor(vnode) {
+        this.option = vnode.attrs.option;
+    }
+
+    view(vnode) {
+
+        let link = vnode.attrs.link;
+        let nome = vnode.attrs.nome;
+
+        return <div class="nes-container is-rounded">
+            <ul>
+                <li>Selecione a quantidade de seguidores a se presentear: {this.select()} </li>
+                <li>Custa U$ {this.value()}</li>
+                <li><ModalPresentear n={this.nFollowers()} btn_text="Presentear seguidores" link={link} nome={nome}/></li>
+            </ul>
+        </div>
+    }
+
+    value() {
+
+        return this.option * 25;
+    }
+
+    select() {
+        
+        return <select oninput={(ev) => this.setOption(ev) }>
+            <option hidden>Escolha aqui</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+        </select>
+    }
+
+    setOption(ev) {
+            this.option = parseInt(ev.target.value);
+    }
+
+    nFollowers() {
+            return this.option;
+} 
+}
+export class SelectSubornar {
+    option: number;
+
+    constructor(vnode) {
+        this.option = vnode.attrs.option;
+    }
+
+    view(vnode) {
+
+        let link = vnode.attrs.link;
+        let nome = vnode.attrs.nome;
+
+        return <div class="nes-container is-rounded">
+            <ul>
+                <li>Selecione a quantidade de seguidores a se subornar: {this.select()} </li>
+                <li>Custa U$ {this.value()}</li>
+                <li><ModalSubornar n={this.nFollowers()} btn_text="Subornar seguidores" link={link} nome={nome}/></li>
+            </ul>
+        </div>
+    }
+
+    value() {
+
+        return this.option * 25;
     }
 
     select() {
