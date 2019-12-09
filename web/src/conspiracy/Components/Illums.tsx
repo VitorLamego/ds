@@ -11,13 +11,11 @@ export class Illums {
         let btn_text = vnode.attrs.btn_text || "Botão sem texto";
         let link = vnode.attrs.link;
         let nome = vnode.attrs.nome;
+        let texto_fundo_img = vnode.attrs.texto_fundo_img;
 
         return <div>
-            <Card title={title} img={image} btn_expnd={btn_expnd}>
-                <p class="consp_intro">
-                    Conspiração é uma ação de construir um plano que destrua alguém, neste caso outro illuminati. 
-                    Aconselhamos tomar bastante cuidado com o que você fará, qualquer decisão errada irá afetar seriamente o seu destino.
-                    Por aqui você poderá  escolher entre apagar,cooptar,evoluir,presentear e subornar outros illuminatis. Faça sua escolha !!</p>
+            <Card title={title} img={image} btn_expnd={btn_expnd} texto texto_fundo_img={texto_fundo_img}>
+                <p class="consp_intro">Para conseguir mais seguidores o suborno é uma ótima opção! Escolha um illuminatti e suborne seus seguidores para que eles se juntem a você. Porém, optando por este caminho você terá de pagar um alto preço e também haverão cosequências negativas! </p>
                 <CardTEXTO title="Apagar" btn_expnd="Saber mais...">
                     <ul>
                         <li><a>Aumenta a inimizade.</a></li>
