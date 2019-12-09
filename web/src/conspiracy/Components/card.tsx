@@ -12,6 +12,7 @@ export class Card {
         let imagem = vnode.attrs.img;
         let children = vnode.children;
         let childrenStyle;
+        let texto_fundo_img = vnode.attrs.texto_fundo_img || "Sem texto";
 
         if (this.expanded) {
             childrenStyle = "";
@@ -26,7 +27,7 @@ export class Card {
                     <div class="flip">
                         <div class="fundo">
                             <img src={imagem} widht="500" height="500"></img>
-                            <p>Colocar texto sobre o personagem aqui!!!</p>
+                            <p>{texto_fundo_img}</p>
                         </div>
                         <div class="frente">
                             <img src={imagem} widht="500" height="500"></img>
