@@ -18,8 +18,8 @@ export class SelectApagar {
 
         return <div class="nes-container is-rounded">
             <ul>
-                <li>Selecione a quantidade de seguidores a se apagar: {this.select()} </li>
-                <li>Custa U$ {this.value()}</li>
+                <li>Selecione a quantidade de seguidores a se apagar: {this.select()} </li><br></br>
+                <li>Custa U$ {this.value()}</li><br></br>
                 <li><ModalApagar n={this.nFollowers()} btn_text="Apagar seguidores" link={link} nome={nome}/></li>
             </ul>
         </div>
@@ -63,8 +63,8 @@ export class SelectCooptar {
 
         return <div class="nes-container is-rounded">
             <ul>
-                <li>Selecione a quantidade de seguidores a se cooptar: {this.select()} </li>
-                <li>Custa U$ {this.value()}</li>
+                <li>Selecione a quantidade de seguidores a se cooptar: {this.select()} </li><br></br>
+                <li>Custa U$ {this.value()}</li><br></br>
                 <li><ModalCooptar n={this.nFollowers()} btn_text="Cooptar seguidores" link={link} nome={nome}/></li>
             </ul>
         </div>
@@ -108,8 +108,8 @@ export class SelectEvoluir {
 
         return <div class="nes-container is-rounded">
             <ul>
-                <li>Selecione a quantidade de habilidades a se evoluir: {this.select()} </li>
-                <li>Custa U$ {this.value()}</li>
+                <li>Selecione a quantidade de habilidades a se evoluir: {this.select()} </li><br></br>
+                <li>Custa U$ {this.value()}</li><br></br>
                 <li><ModalEvoluir n={this.nFollowers()} btn_text="Evoluir habilidades" link={link} nome={nome}/></li>
             </ul>
         </div>
@@ -153,8 +153,8 @@ export class SelectPresentear {
 
         return <div class="nes-container is-rounded">
             <ul>
-                <li>Selecione a quantidade de seguidores a se presentear: {this.select()} </li>
-                <li>Custa U$ {this.value()}</li>
+                <li>Selecione a quantidade de seguidores a se presentear: {this.select()} </li><br></br>
+                <li>Custa U$ {this.value()}</li><br></br>
                 <li><ModalPresentear n={this.nFollowers()} btn_text="Presentear seguidores" link={link} nome={nome}/></li>
             </ul>
         </div>
@@ -198,8 +198,8 @@ export class SelectSubornar {
 
         return <div class="nes-container is-rounded">
             <ul>
-                <li>Selecione a quantidade de seguidores a se subornar: {this.select()} </li>
-                <li>Custa U$ {this.value()}</li>
+                <li>Selecione a quantidade de seguidores a se subornar: {this.select()} </li><br></br>
+                <li>Custa U$ {this.value()}</li><br></br>
                 <li><ModalSubornar n={this.nFollowers()} btn_text="Subornar seguidores" link={link} nome={nome}/></li>
             </ul>
         </div>
