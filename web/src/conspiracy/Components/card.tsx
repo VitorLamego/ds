@@ -12,7 +12,6 @@ export class Card {
         let imagem = vnode.attrs.img;
         let children = vnode.children;
         let childrenStyle;
-        let texto_fundo_img = vnode.attrs.texto_fundo_img || "Sem texto";
 
         if (this.expanded) {
             childrenStyle = "";
@@ -24,15 +23,7 @@ export class Card {
         return <div class="nes-container is-rounded">
             <div>
                 <h2>
-                    <div class="flip">
-                        <div class="fundo">
-                            <img src={imagem} widht="500" height="500"></img>
-                            <p>{texto_fundo_img}</p>
-                        </div>
-                        <div class="frente">
-                            <img src={imagem} widht="500" height="500"></img>
-                        </div>
-                    </div>
+                    <img src={imagem} width="350" height="350"></img>
                     <div class="card_title">
                         {title}
                     </div>
